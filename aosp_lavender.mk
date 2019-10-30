@@ -22,11 +22,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from lavender device
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
-# Inherit some common PixelExperience stuff.
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-#CUSTOM_BUILD_TYPE := EXPERIMENTAL
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common AospExtended stuff.
+$(call inherit-product, vendor/aosp/common.mk)
+
+# Set Boot Animination Resolution
+TARGET_BOOT_ANIMATION_RES := 2280
 
 PRODUCT_NAME := aosp_lavender
 PRODUCT_BRAND := Xiaomi
@@ -47,3 +47,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 TARGET_VENDOR := Xiaomi
+
+# Use Gapps
+TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
+WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
