@@ -189,9 +189,9 @@ PRODUCT_PACKAGES += \
     android.hardware.configstore@1.0-service \
     android.hardware.broadcastradio@1.0-impl
 
-# Device-specific settings
-#PRODUCT_PACKAGES += \
-#    XiaomiParts
+# Doze
+PRODUCT_PACKAGES += \
+   XiaomiDoze
 
 # DRM
 PRODUCT_PACKAGES += \
