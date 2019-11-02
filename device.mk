@@ -87,6 +87,10 @@ PRODUCT_PACKAGES += \
 	android.hardware.vibrator@1.0-impl \
 	android.hardware.vibrator@1.0-service
 
+# GoogleCamera
+PRODUCT_PACKAGES += \
+    GoogleCamera
+
 # Vendor files
 $(call inherit-product, vendor/xiaomi/lavender/lavender-vendor.mk)
 
